@@ -21,11 +21,10 @@
     </div>
 
     <div class="table-responsive">
-      <table class="table table-striped table-hover table-bordered" *ngIf="heroes.length > 0; else noData">
+      <table class="table table-striped table-hover table-bordered">
         <thead class="table-dark text-center">
           <tr>
-            <th>
-              <button class="btn btn-primary" (click)="MuestraImagen = !MuestraImagen">
+            <th><button class="btn btn-primary" (click)="MuestraImagen = !MuestraImagen">
                 {{ MuestraImagen ? 'Ocultar Imagen' : 'Mostrar Imagen' }}
               </button>
             </th>
@@ -36,7 +35,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let heroe of heroes" class="text-center">
+          <tr *ngFor="let heroe of heroes | heroesFilter:listFilter">
             <td><img *ngIf="MuestraImagen" [src]="heroe.imagen" [style.width.px]="imageWidth" [style.margin.px]="imageMargin"></td>
             <td>{{ heroe.nombre }}</td>
             <td>{{ heroe.description }}</td>

@@ -9,6 +9,8 @@ import { NgForOf, NgIf } from '@angular/common';
   templateUrl: './heroes-list.component.html',
 })
 export class HeroesListComponent {
+
+
   imageWidth:number=100;
   imageMargin:number=10;
   MuestraImagen:boolean=true;
@@ -24,29 +26,29 @@ listeFilter():void{
     {
     imagen:"https://dragonball-api.com/characters/goku_normal.webp",
     nombre:"Goku",
-    description:"KameHameHa",
-    race:"Saiyan",
+    descripcion:"KameHameHa",
+    raza:"Saiyan",
     ki:90000
     },
     {
     imagen:"https://dragonball-api.com/characters/vegeta_normal.webp",
     nombre:"Vegeta",
-    description:"Final Flash",
-    race:"Saiyan",
+    descripcion:"Final Flash",
+    raza:"Saiyan",
     ki:19000
     },
     {
     imagen:"https://dragonball-api.com/characters/picolo_normal.webp",
     nombre:"Piccolo",
-    description:"Malanasapo",
-    race:"Namekiano",
+    descripcion:"Malanasapo",
+    raza:"Namekiano",
     ki:70000
     },
      {
     imagen:"https://dragonball-api.com/characters/Freezer.webp",
     nombre:"Freezer",
-    description:"Death Ball",
-    race:"Alien",
+    descripcion:"Death Ball",
+    raza:"Alien",
     ki:70000
     }
   ]
