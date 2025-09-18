@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 
 @Component({
- imports: [DatePipe],
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, HeroesListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Alan Sánchez';
+
   duplicarNumero(valor: number): number {
     return valor * 2;
   }
@@ -19,4 +23,3 @@ export class AppComponent {
     director: 'Francis Ford Coppola'
   };
 }
-import { DatePipe } from '@angular/common';
