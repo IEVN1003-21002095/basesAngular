@@ -38,18 +38,18 @@ export class CinepolisComponent {
   }
 
   procesarCompra(): void {
-      // No se puede comprar más de 7 boletos por persona
-      if (this.cantidadBoletos > 7) {
+      // Cada comprador puede comprar máximo 7 boletos
+      const maxBoletos = this.compradores * 7;
+      if (this.compradores < 1) {
         this.totalPagar = 0;
         this.totalConDescuento = 0;
-        this.errorCompra = "Error: No se pueden comprar más de 7 boletos por persona.";
+        this.errorCompra = "Error: Debe haber al menos 1 comprador.";
         return;
       }
-      // Si son 7 boletos, debe haber más de 1 comprador
-      if (this.cantidadBoletos >=8 && this.compradores <= 1) {
+      if (this.cantidadBoletos > maxBoletos) {
         this.totalPagar = 0;
         this.totalConDescuento = 0;
-        this.errorCompra = "Error: Si compra 8 boletos debe haber más de 1 comprador.";
+        this.errorCompra = `Error: ${this.compradores} comprador(es) solo pueden comprar hasta ${maxBoletos} boletos.`;
         return;
       }
       this.errorCompra = "";
