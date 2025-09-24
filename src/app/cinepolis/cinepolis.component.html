@@ -1,0 +1,60 @@
+<div class="container py-5">
+  <div class="row g-4">
+    <!-- Formulario -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h5 class="mb-0">Datos del cliente</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="procesarCompra()">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" id="nombre" class="form-control" [(ngModel)]="nombreCliente" name="nombre" placeholder="Ingresa tu nombre">
+            </div>
+             <div class="mb-3">
+              <label for="compradores" class="form-label">Cantidad de compradores</label>
+              <input type="number" id="compradores" class="form-control" [(ngModel)]="compradores" name="compradores" placeholder="Ej. 2">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">¿Tienes tarjeta Cineco?</label>
+              <div class="form-check">
+                <input type="radio" id="tarjeta1" class="form-check-input" [(ngModel)]="tieneTarjeta" name="tarjeta" [value]="true">
+                <label for="tarjeta1" class="form-check-label">Sí</label>
+            </div>
+
+              <div class="form-check">
+                <input type="radio" id="tarjeta2" class="form-check-input" [(ngModel)]="tieneTarjeta" name="tarjeta" [value]="false">
+                <label for="tarjeta2" class="form-check-label">No</label>
+              </div>
+            </div>
+             <div class="mb-3">
+              <label for="cantidadBoletos" class="form-label">Cantidad de boletos</label>
+              <input type="number" id="cantidadBoletos" class="form-control" [(ngModel)]="cantidadBoletos" name="cantidadBoletos" placeholder="Ej. 2">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-success text-white">
+          <h5 class="mb-0 text-center">Valor de la compra</h5>
+        </div>
+        <div class="card-body text-center">
+          <input type="text" class="form-control text-center fs-4" [value]="'$' + totalConDescuento.toFixed(2)" disabled>
+          <p class="form-control text-center fs-4" [innerText]="errorCompra"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <div class="text-center mt-4">
+    <p class="fw-bold">Acciones</p>
+    <button class="btn btn-primary me-2" (click)="procesarCompra()">Procesar</button>
+    <button class="btn btn-danger" (click)="cancelarCompra()">Cancelar</button>
+  </div>
+</div>

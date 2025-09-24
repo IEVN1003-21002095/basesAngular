@@ -3,11 +3,12 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 import { OperasBasComponent } from "./formularios/operas-bas/operas-bas.component";
+import { CinepolisComponent } from "./cinepolis/cinepolis.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeroesListComponent, OperasBasComponent],
+  imports: [CommonModule, HeroesListComponent, OperasBasComponent, CinepolisComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

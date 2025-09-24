@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgForOf, NgIf } from '@angular/common';
 import { IHeroes } from '../heroes';
 
 @Component({
@@ -14,7 +13,6 @@ export class HeroesListComponent {
   imageWidth: number = 100;
   imageMargin: number = 10;
   MuestraImagen: boolean = true;
-
   listFilter: string = '';
 
   heroes: IHeroes[] = [
