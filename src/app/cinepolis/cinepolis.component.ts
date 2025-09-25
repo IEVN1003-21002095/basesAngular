@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./cinepolis.component.css']
 })
 export class CinepolisComponent {
-  tickets: number = 100.00;
+  tickets: number = 12.00;
   totalPagar: number = 0;
   descuento: number = 0;
   totalConDescuento: number = 0;

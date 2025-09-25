@@ -4,11 +4,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 import { OperasBasComponent } from "./formularios/operas-bas/operas-bas.component";
 import { CinepolisComponent } from "./cinepolis/cinepolis.component";
+import { ResistenciasComponent } from "./resistencias/resistencias.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeroesListComponent, OperasBasComponent, CinepolisComponent],
+  imports: [CommonModule, HeroesListComponent, OperasBasComponent, CinepolisComponent, ResistenciasComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

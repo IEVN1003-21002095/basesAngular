@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <h3>Calculadora de Resistencias por Código de Colores</h3>
+
+  <div class="row mt-3">
+    <!-- Banda 1 -->
+    <div class="col-md-3">
+  <label>Banda 1</label>
+      <div *ngFor="let color of colores">
+        <input type="radio" [value]="color" name="banda1" [(ngModel)]="banda1" />
+        <span>{{ color.nombre }}</span>
+      </div>
+    </div>
+
+    <!-- Banda 2 -->
+    <div class="col-md-3">
+  <label>Banda 2</label>
+      <div *ngFor="let color of colores">
+        <input type="radio" [value]="color" name="banda2" [(ngModel)]="banda2" />
+        <span>{{ color.nombre }}</span>
+      </div>
+    </div>
+
+    <!-- Multiplicador -->
+    <div class="col-md-3">
+  <label>Multiplicador</label>
+      <div *ngFor="let color of colores">
+        <input type="radio" [value]="color" name="banda3" [(ngModel)]="banda3" />
+        <span>{{ color.nombre }}</span>
+      </div>
+    </div>
+
+    <!-- Tolerancia -->
+    <div class="col-md-3">
+  <label>Tolerancia</label>
+      <div *ngFor="let tol of tolerancias">
+        <input type="radio" [value]="tol" name="tolerancia" [(ngModel)]="tolerancia" />
+        <span>{{ tol.nombre }} ({{ tol.porcentaje }}%)</span>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-3" (click)="calcular()">Calcular</button>
+
+  <table class="table table-bordered table-striped mt-4">
+    <thead>
+      <tr>
+        <th>Color1</th>
+        <th>Color2</th>
+        <th>Color3</th>
+        <th>Tolerancia</th>
+        <th>Valor sin tolerancia</th>
+        <th>Valor mínimo</th>
+        <th>Valor máximo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ banda1.nombre }}</td>
+        <td>{{ banda2.nombre }}</td>
+        <td>{{ banda3.nombre }}</td>
+        <td>{{ tolerancia.nombre }} {{ tolerancia.porcentaje }}%</td>
+        <td>{{ resultado.nominal }}</td>
+        <td>{{ resultado.minimo }}</td>
+        <td>{{ resultado.maximo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
