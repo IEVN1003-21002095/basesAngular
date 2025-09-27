@@ -1,18 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
 
-import { ResistenciasComponent } from './resistencias.component';
+import { ResistenciasLogica } from './resistencias.component';
 
-describe('ResistenciasComponent', () => {
-  let component: ResistenciasComponent;
-  let fixture: ComponentFixture<ResistenciasComponent>;
+describe('ResistenciasLogica', () => {
+  let component: ResistenciasLogica;
+  let fixture: ComponentFixture<ResistenciasLogica>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResistenciasComponent]
+      imports: [ResistenciasLogica]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ResistenciasComponent);
+    fixture = TestBed.createComponent(ResistenciasLogica);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

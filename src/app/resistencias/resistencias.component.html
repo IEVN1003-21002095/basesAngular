@@ -4,37 +4,63 @@
   <div class="row mt-3">
     <!-- Banda 1 -->
     <div class="col-md-3">
-  <label>Banda 1</label>
+      <label for="banda1">Banda 1</label>
       <div *ngFor="let color of colores">
-        <input type="radio" [value]="color" name="banda1" [(ngModel)]="banda1" />
-        <span>{{ color.nombre }}</span>
+        <input
+          type="radio"
+          [value]="color"
+          [(ngModel)]="banda1"
+          name="banda1"
+          [id]="'banda1-' + color.nombre"
+        />
+        <label [for]="'banda1-' + color.nombre">{{ color.nombre }}</label>
       </div>
     </div>
 
     <!-- Banda 2 -->
     <div class="col-md-3">
-  <label>Banda 2</label>
+      <label for="banda2">Banda 2</label>
       <div *ngFor="let color of colores">
-        <input type="radio" [value]="color" name="banda2" [(ngModel)]="banda2" />
-        <span>{{ color.nombre }}</span>
+        <input
+          type="radio"
+          [value]="color"
+          [(ngModel)]="banda2"
+          name="banda2"
+          [id]="'banda2-' + color.nombre"
+        />
+        <label [for]="'banda2-' + color.nombre">{{ color.nombre }}</label>
       </div>
     </div>
 
     <!-- Multiplicador -->
     <div class="col-md-3">
-  <label>Multiplicador</label>
+      <label for="banda3">Multiplicador</label>
       <div *ngFor="let color of colores">
-        <input type="radio" [value]="color" name="banda3" [(ngModel)]="banda3" />
-        <span>{{ color.nombre }}</span>
+        <input
+          type="radio"
+          [value]="color"
+          [(ngModel)]="banda3"
+          name="banda3"
+          [id]="'banda3-' + color.nombre"
+        />
+        <label [for]="'banda3-' + color.nombre">{{ color.nombre }}</label>
       </div>
     </div>
 
     <!-- Tolerancia -->
     <div class="col-md-3">
-  <label>Tolerancia</label>
+      <label for="tolerancia">Tolerancia</label>
       <div *ngFor="let tol of tolerancias">
-        <input type="radio" [value]="tol" name="tolerancia" [(ngModel)]="tolerancia" />
-        <span>{{ tol.nombre }} ({{ tol.porcentaje }}%)</span>
+        <input
+          type="radio"
+          [value]="tol"
+          [(ngModel)]="tolerancia"
+          name="tolerancia"
+          [id]="'tolerancia-' + tol.nombre"
+        />
+        <label [for]="'tolerancia-' + tol.nombre">
+          {{ tol.nombre }} ({{ tol.porcentaje }}%)
+        </label>
       </div>
     </div>
   </div>
@@ -44,9 +70,9 @@
   <table class="table table-bordered table-striped mt-4">
     <thead>
       <tr>
-        <th>Color1</th>
-        <th>Color2</th>
-        <th>Color3</th>
+        <th>Banda 1</th>
+        <th>Banda 2</th>
+        <th>Multiplicador</th>
         <th>Tolerancia</th>
         <th>Valor sin tolerancia</th>
         <th>Valor mínimo</th>
