@@ -3,8 +3,8 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 import { OperasBasComponent } from "./formularios/operas-bas/operas-bas.component";
-import { CinepolisComponent } from "./cinepolis/cinepolis.component";
-import { ResistenciasComponent } from "./resistencias/resistencias.component";
+import { CinepolisComponent } from "./formularios/cinepolis/cinepolis.component";
+import { ResistenciasComponent } from "./formularios/resistencias/resistencias.component";
 
 @Component({
   selector: 'app-root',

@@ -13,7 +13,13 @@
           name="banda1"
           [id]="'banda1-' + color.nombre"
         />
-        <label [for]="'banda1-' + color.nombre">{{ color.nombre }}</label>
+        <label
+          [for]="'banda1-' + color.nombre"
+          [style.backgroundColor]="color.hex"
+          style="padding: 5px 10px; margin: 2px; display: inline-block; color: white;"
+        >
+          {{ color.nombre }}
+        </label>
       </div>
     </div>
 
@@ -28,7 +34,13 @@
           name="banda2"
           [id]="'banda2-' + color.nombre"
         />
-        <label [for]="'banda2-' + color.nombre">{{ color.nombre }}</label>
+        <label
+          [for]="'banda2-' + color.nombre"
+          [style.backgroundColor]="color.hex"
+          style="padding: 5px 10px; margin: 2px; display: inline-block; color: white;"
+        >
+          {{ color.nombre }}
+        </label>
       </div>
     </div>
 
@@ -43,7 +55,13 @@
           name="banda3"
           [id]="'banda3-' + color.nombre"
         />
-        <label [for]="'banda3-' + color.nombre">{{ color.nombre }}</label>
+        <label
+          [for]="'banda3-' + color.nombre"
+          [style.backgroundColor]="color.hex"
+          style="padding: 5px 10px; margin: 2px; display: inline-block; color: white;"
+        >
+          {{ color.nombre }}
+        </label>
       </div>
     </div>
 
@@ -58,7 +76,11 @@
           name="tolerancia"
           [id]="'tolerancia-' + tol.nombre"
         />
-        <label [for]="'tolerancia-' + tol.nombre">
+        <label
+          [for]="'tolerancia-' + tol.nombre"
+          [style.backgroundColor]="tol.hex"
+          style="padding: 5px 10px; margin: 2px; display: inline-block; color: black;"
+        >
           {{ tol.nombre }} ({{ tol.porcentaje }}%)
         </label>
       </div>
